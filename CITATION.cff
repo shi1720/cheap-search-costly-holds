@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: 'Please cite the manuscript and this versioned artifact when using the model, experiments, or figures.'
+title: 'Cheap Search, Costly Holds: Reservation Synchronization in Agentic Markets'
+version: 1.0.0
+date-released: '2026-10-16'
+type: software
+authors:
+  - family-names: Gupta
+    given-names: Shivam
+    affiliation: Independent Researcher
+repository-code: 'https://github.com/shi1720/cheap-search-costly-holds'
+url: 'https://github.com/shi1720/cheap-search-costly-holds'
+abstract: 'Reproducible economic models and synthetic event experiments for temporary exclusive reservations in agentic commerce, with exact finite-state verification, equilibrium enumeration, and bounded planner optimization.'
