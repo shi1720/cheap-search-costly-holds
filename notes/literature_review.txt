@@ -1,0 +1,64 @@
+LITERATURE AND CONTRIBUTION AUDIT
+Study: Cheap Search, Costly Holds: Reservation Synchronization in Agentic Markets
+Search date: 16 October 2026
+
+Question selected
+How do exclusive temporary alternatives affect distinct successful transactions when delegated search becomes cheaper? The study separates attempted breadth, hold duration, and cross-supplier release dependence. Its scientific claims concern declared mathematical models and constructed events, not observed marketplace prevalence.
+
+Search process
+Searches covered AI procurement, agentic commerce, duplicate bookings, multiple applications, strategic queueing and multi-listing, reservation externalities, batch admission, synchronized departures, loss networks, redundancy dependence, and congestion pricing. Broad candidate ideas about AI error concentration, procurement contracts, and multilingual token pricing were discarded because of extensive prior work and/or substantial overlap with the author's earlier manuscripts.
+
+Particularly relevant queries included:
+- AI agents procurement outside option price discrimination delegated search economic model
+- AI agents reservations hoarding
+- parallel reservations externality consumer
+- multiple job applications matching function offers no recall coordination frictions
+- reservations multiple holding externalities paper
+- loss system common service time batch
+- batch arrivals partial acceptance simultaneous departure loss
+- loss synchronized departures batch service
+- strategic redundancy queues pricing
+- search costs reservation holding times
+
+Closest research and primary sources
+1. Albrecht, Gautier and Vroman (2006), Equilibrium Directed Search with Multiple Applications, Review of Economic Studies 73(4):869-891. DOI 10.1111/j.1467-937X.2006.00400.x. Full author-hosted paper reviewed: https://faculty.georgetown.edu/albrecht/agvfinalversion.pdf
+   Relevance: multiple applications and endogenous search are established. Our claim does not rest on discovering their externality.
+2. Albrecht, Gautier and Vroman (2003), Matching with Multiple Applications: The Limiting Case. Full correction reviewed: https://units.georgetown.edu/economics/pdf/325.pdf
+   Relevance: finite offer failures need not factorize. This directly motivates testing the independent-availability assumption rather than claiming it as an exact finite result.
+3. Chen, Ding and Yang (2024), Multi-Listing for Horizontally Differentiated Services, SSRN 4869846, June 18 version. DOI 10.2139/ssrn.4869846. Full 50-page public PDF obtained through its SSRN browser link and introduction/model/related literature reviewed. The author page lists a revised 2026 version as forthcoming in Operations Research: https://sites.google.com/site/y7ding/research
+   Relevance: strategic multi-listing, welfare losses, and corrective prices already exist. Their queueing alternatives concern cancellation on entry/service; our model concerns exclusive temporary loss admission and a later hold-release clock. The paper cites the reviewed 2024 version, without inventing journal pages or a revised-version DOI.
+4. Alexandrov and Lariviere (2012), Are Reservations Recommended? DOI 10.1287/msom.1110.0360. Publisher abstract and metadata checked.
+5. Kelly (1991), Loss Networks. DOI 10.1214/aoap/1177005872. Author-hosted publication entry and introductory material checked: https://www.statslab.cam.ac.uk/~fpk1/PAPERS/loss.html
+6. Ormeci and Burnetas (2005), Dynamic Admission Control for Loss Systems with Batch Arrivals. DOI 10.1239/aap/1134587747. Publisher abstract/metadata and accessible author-uploaded model exposition checked. Group occupation is an established stochastic-knapsack/loss-network idea; the CTMC is not presented as a new general solution method.
+7. Anton et al. (2021), On the Stability of Redundancy Models. DOI 10.1287/opre.2020.2030. Author preprint and publication metadata checked: https://arxiv.org/abs/1903.04414
+8. Agrawal et al. (2012), Price of Correlations in Stochastic Optimization. DOI 10.1287/opre.1110.1011. Full author-hosted paper reviewed: https://web.stanford.edu/~yyye/priceofcorrelation.pdf
+9. Naor (1969), The Regulation of Queue Size by Levying Tolls. DOI 10.2307/1909200. Original-paper copy and bibliographic information checked; congestion pricing is explicitly treated as prior art.
+10. Wolff (1982), Poisson Arrivals See Time Averages. DOI 10.1287/opre.30.2.223. Publisher page and original-paper copy checked.
+
+Commercial interface check
+Shopify version 2026-01 DraftOrder documents that draft creation does not reserve inventory by default, but explicit reserveInventoryUntil can do so; its field specifies automatic restocking time:
+https://shopify.dev/docs/api/admin-graphql/2026-01/objects/DraftOrder
+Shopify Checkout states that inventory is held at payment-information submission, not ordinary browsing:
+https://help.shopify.com/en/manual/checkout-settings
+These are evidence of an actual reservation boundary, not evidence that the paper's timing parameters describe Shopify, that agents ordinarily take such holds, or that a measured commercial harm has occurred.
+
+Screen against earlier local manuscripts
+The opening two pages of all 53 top-level PDFs present in Downloads/research were extracted for topic screening. The nearest earlier manuscripts are:
+- 06_Contingent_Exposure_Routing.pdf: shared errors and financial market-impact exposure under failover. Different outcome, dynamics, and intervention from temporary capacity holds.
+- 10_Collective_Capability_Contracts.pdf: supplier-side joint deliverability, shared resource capacity, and rooted offers. The new study concerns buyer-side alternative claims, joint release timing, and search incentives. It does not reuse those certificates or reservation trials.
+- 07_Delegated_Deposit_Control.pdf: controller concentration and bank withdrawal/liquidity risk. Different financial object and tail-risk problem.
+- 09_Capped_Payments_Adaptive_AI_Delegation.pdf and 12_Private_Participation_Agent_Contracts.pdf: incentive-compatible inspection and participation privacy. Neither is the present congestion model.
+- 16_Equal_Quotas_Unequal_Access.pdf: multilingual token admission and quota accounting. Different data, access mechanism, and research question.
+No figures, results, code, data, or proofs from these manuscripts were reused. This audit concerns topic and contribution overlap, not the publication status or quality of the earlier papers.
+
+Defensible contribution claims
+A. A finite dynamic construction matches the complete one-supplier pre-commitment reservation-state process under two release mechanisms and derives an unbounded ratio of distinct successful mandates. Final-purchase labels and cross-supplier linkage are explicitly excluded from the matched observation.
+B. A conditional cheap-search asymptotic specifies constants and rates for equilibrium breadth, success, and net welfare when hold duration grows as a power of breadth. Constant duration is a countercase.
+C. An exhaustive symmetric-equilibrium solver, a scalar-LP planner with interval upper bounds, and an occupancy supporting price specialize established methods to that model.
+D. Exact and event-driven checks retain finite correlations and expose a startup synchronization artifact; long-warm-up follow-up is labeled exploratory and reported separately.
+
+What is not claimed
+The paper does not introduce multiple-application externalities, the general inadequacy of marginals, Pigouvian pricing, or loss-network balance. It does not prove general large-market convergence, field prevalence, deployable commercial improvement, universal originality, patentability, or likely acceptance at a top AI conference. No finite literature search establishes that no similar unpublished or inaccessible result exists. No exact duplicate of claims A-B was located in the reviewed material; this remains a qualified literature-search conclusion.
+
+Suitability
+This is a theoretical/computational economics manuscript aligned with Econburgh's AI/economy, digital markets, quantitative methods, and industrial-organization topics. Its economics venue fit is stronger than a claim of a new LLM architecture or experimentally evaluated AI capability.

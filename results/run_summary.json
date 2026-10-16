@@ -1,0 +1,9 @@
+{
+  "runs": 840,
+  "counted_arrivals": 103200000,
+  "including_warmup": 120000000,
+  "elapsed_seconds": 381.38120698928833,
+  "exact_cases": 231,
+  "max_stationarity_residual": 1.3877787807814457e-15,
+  "max_exact_balance_error": 4.440892098500626e-16
+}

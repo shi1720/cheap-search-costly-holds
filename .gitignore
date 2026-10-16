@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.xdv
+paper/build.*
+notes/prior_work_screen.json

@@ -1,0 +1,7 @@
+{
+  "runs": 36,
+  "counted_arrivals": 18000000,
+  "including_warmup": 44640000,
+  "elapsed_seconds": 135.68996715545654,
+  "purpose": "Exploratory post-hoc diagnosis of fixed-clock startup and horizon sensitivity"
+}
