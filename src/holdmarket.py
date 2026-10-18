@@ -131,6 +131,7 @@ def planner(m,tolerance=1e-6,max_nodes=100000):
         p=np.eye(m.K+1)[k];met=m.metrics(p)
         if best is None or met['welfare']>best['welfare']:best=dict(p=p,**met)
     heap=[(-bound(lower,upper),0,lower,upper)];nodes=0;seq=1
+    discarded_upper=-np.inf
     while heap and -heap[0][0]>best['welfare']+tolerance and nodes<max_nodes:
         negub,_,l,u=heapq.heappop(heap);mid=(l+u)/2;nodes+=1
         sol=fixed_q_lp(m,mid)
@@ -140,7 +141,10 @@ def planner(m,tolerance=1e-6,max_nodes=100000):
             ub=bound(a,b)
             if ub>best['welfare']+tolerance:
                 heapq.heappush(heap,(-ub,seq,a,b));seq+=1
-    ub=max(best['welfare'], -heap[0][0] if heap else best['welfare']+tolerance)
+            else:
+                # A pruned interval still contributes to the reported global bound.
+                discarded_upper=max(discarded_upper,ub)
+    ub=max(best['welfare'], discarded_upper, -heap[0][0] if heap else -np.inf)
     best.update(upper_bound=ub,gap=ub-best['welfare'],nodes=nodes)
     return best
 

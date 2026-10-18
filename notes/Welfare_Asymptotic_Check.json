@@ -1,0 +1,7 @@
+{
+  "precision_digits": 80,
+  "cases": 7,
+  "maximum_absolute_difference_from_original": "3.36E-77",
+  "all_differences_below": "1e-70",
+  "script": "check_welfare_asymptotics.py"
+}

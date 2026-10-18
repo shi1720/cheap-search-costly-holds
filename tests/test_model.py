@@ -117,3 +117,30 @@ def test_multiple_equilibrium_roots_are_retained():
     assert len(es)==3
     assert es[0]['mean_k']==1 and es[-1]['mean_k']==2
     assert 1<es[1]['mean_k']<2
+
+
+def test_planner_retains_pruned_partition_bounds(monkeypatch):
+    import holdmarket as hm
+    original_lp = hm.linprog
+    solved = []
+    def observed_lp(*args, **kwargs):
+        result = original_lp(*args, **kwargs)
+        if kwargs.get('A_ub') is not None and result.success:
+            # With rate=1 and service=0, action-one coefficients identify
+            # the interval independently of the heap.
+            rows = kwargs['A_ub']
+            solved.append((float(rows[0][1]/model.base), float(-rows[1][1]/model.base), float(-result.fun)))
+        return result
+    monkeypatch.setattr(hm, 'linprog', observed_lp)
+    model = hm.Market(K=8, base=10.286785149436582,
+                      slope=49.198378532529375, cost=.17912152173021503)
+    solution = hm.planner(model, tolerance=1e-3)
+    split_intervals = set()
+    for l,u,_ in solved:
+        mid=(l+u)/2
+        if any(abs(a-l)<1e-12 and abs(b-mid)<1e-12 for a,b,_ in solved):
+            split_intervals.add((l,u))
+    terminal = [ub for l,u,ub in solved if (l,u) not in split_intervals]
+    assert terminal
+    assert solution['upper_bound'] >= max(terminal)-1e-12
+    assert solution['gap'] <= 1.001e-3

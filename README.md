@@ -25,6 +25,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python -m pytest tests -q
 python verify_results.py
+python check_welfare_asymptotics.py
 python run_experiments.py
 python diagnose_fixed.py
 python make_figures.py
@@ -58,10 +59,18 @@ The complete main experiment used four processes and took about 6.4 minutes on t
 
 Marginal availability conservation is exact at fixed breadth with zero post-use occupation, but `1-(1-q)**k` requires independent availability. The paper does not prove this approximation's general large-market convergence. Full-market breadth demonstrates its failure. Fixed-clock observations must be interpreted at their recorded horizons.
 
-The planner's interval relaxation supplies a mathematical upper-bound construction evaluated with floating-point SciPy/HiGHS LPs; it is not an exact rational certificate for arbitrary real inputs. The small labeled-state stationarity oracle uses Python `Fraction` and exact Gaussian elimination. The checked grid contains 15 oracle comparisons and 216 economic parameter configurations. Monte Carlo intervals describe precision over simulation seeds, not uncertainty about a real economy.
+The planner's interval relaxation supplies a mathematical upper-bound construction evaluated with floating-point SciPy/HiGHS LPs; it is not an exact rational certificate for arbitrary real inputs. The small labeled-state stationarity oracle uses Python `Fraction` and exact Gaussian elimination. The checked grid contains 15 oracle comparisons and 216 economic parameter configurations. Seven test functions include a journal-stage terminal-partition audit of the planner upper bound. Monte Carlo intervals describe precision over simulation seeds, not uncertainty about a real economy.
 
 ## License and citation
 
 Code is available under the MIT license. Manuscript and original figures are CC BY 4.0. External papers are referenced, not redistributed. For scholarly use, cite:
 
 > Gupta, Shivam. 2026. *Cheap Search, Costly Holds: Reservation Synchronization in Agentic Markets.* Independent research manuscript. https://github.com/shi1720/cheap-search-costly-holds
+
+## Journal replication update (18 October 2026)
+
+The journal replication release preserves `paper/` as the original public working paper. The journal-formatted manuscript is supplied separately to the editor. This update corrects the planner's reported bound by retaining upper bounds from pruned terminal intervals. A terminal-partition regression fails on the old routine and passes after correction. The three central feasible policies and welfare values are unchanged.
+
+All 840 main simulation records and their aggregate summaries were repeated with the original seeds and match the previous records byte for byte. The separate exploratory horizon diagnostic is also repeated and checked independently. `check_welfare_asymptotics.py` provides an 80-digit Decimal recipe for the previously recorded seven beta-one welfare checks. The output is a high-precision numerical check, not an exact-arithmetic certificate.
+
+`notes/journal_replication.txt` and the replication evidence files distinguish the corrections, repeated computations and interpretation limits. The historical release `v1.0.0` remains unchanged.

@@ -1,0 +1,11 @@
+Cheap Search, Costly Holds: Reservation Synchronization in Agentic Markets
+Author: Shivam Gupta, Independent Researcher, Delhi, India
+Journal preparation: Queueing Systems; no acceptance claim.
+
+The journal replication artifact retains all original seeds and the frozen main specification. The main plan hash remains unchanged. Planner-bound bookkeeping now retains the maximum of every terminal partition bound, including pruned intervals. This changes only the reported numerical upper bounds/gaps in the three central cases; feasible policies, welfare, simulations and exact-chain results remain unchanged.
+
+A new terminal-partition audit fails on the original planner and passes on the corrected code. The saved witness concerns a lost relaxation bound; it does not prove that the old reported upper bound was below the feasible optimum. LP calculations remain floating point and do not become exact rational certificates through this correction.
+
+The original six tests and the added partition audit all pass. The separate labeled-state rational oracle continues to cover 15 small cases. The full main experiment contains 840 runs with 103.2 million counted arrivals. The post-hoc horizon diagnostic contains 36 runs with 18 million counted arrivals and is kept separate. No marketplace observations or field-effect estimates are introduced.
+
+The working paper in paper/ is the original historical CC BY 4.0 version. The journal manuscript refines the duration countercase wording to convergence to a positive constant, clarifies adjacent-support reasoning, credits the published 2004 matching correction including Serene Tan, and identifies the accepted revised multi-listing paper while specifying the earlier working-paper version used for comparison. These editorial changes do not alter the declared experimental scenarios.

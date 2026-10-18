@@ -1,0 +1,21 @@
+{
+  "model": {
+    "rate": 1.0,
+    "base": 10.286785149436582,
+    "slope": 49.198378532529375,
+    "beta": 1.0,
+    "value": 1.0,
+    "cost": 0.17912152173021503,
+    "K": 8,
+    "service": 0.0,
+    "delay_cost": 0.0
+  },
+  "old_reported_upper_bound": 0.03328414641424577,
+  "old_welfare": 0.03233890649371066,
+  "terminal_partition_upper_bound": 0.03333713613112406,
+  "difference": 5.2989716878289184e-05,
+  "note": "A discarded relaxation bound can exceed the reported bound; this does not by itself prove that the feasible optimum exceeds the reported value.",
+  "corrected_upper_bound": 0.03333713613112406,
+  "corrected_gap": 0.0009982296374133962,
+  "corrected_welfare": 0.03233890649371066
+}

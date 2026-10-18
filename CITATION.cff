@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: 'Please cite the manuscript and this versioned artifact when using the model, experiments, or figures.'
 title: 'Cheap Search, Costly Holds: Reservation Synchronization in Agentic Markets'
-version: 1.0.0
-date-released: '2026-10-16'
+version: 1.1.0-journal-replication
+date-released: '2026-10-18'
 type: software
 authors:
   - family-names: Gupta

@@ -1,0 +1,54 @@
+{
+  "simulation_runs.json": {
+    "json_equal": true,
+    "byte_identical": true
+  },
+  "simulation_summary.json": {
+    "json_equal": true,
+    "byte_identical": true
+  },
+  "finite_exact.json": {
+    "json_equal": true,
+    "byte_identical": true
+  },
+  "equilibrium_curves.json": {
+    "json_equal": true,
+    "byte_identical": true
+  },
+  "asymptotics.json": {
+    "json_equal": true,
+    "byte_identical": true
+  },
+  "central": [
+    {
+      "cost": 0.03,
+      "all_other_fields_identical": true,
+      "old_gap": 9.999999994736442e-08,
+      "new_gap": 7.100483045974215e-08,
+      "old_upper_bound": 0.8288889888888887,
+      "new_upper_bound": 0.8288889598937192
+    },
+    {
+      "cost": 0.01,
+      "all_other_fields_identical": true,
+      "old_gap": 9.999999994736442e-08,
+      "new_gap": 9.26034093851058e-08,
+      "old_upper_bound": 0.8688889888888888,
+      "new_upper_bound": 0.8688889814922982
+    },
+    {
+      "cost": 0.003,
+      "all_other_fields_identical": true,
+      "old_gap": 9.999999994736442e-08,
+      "new_gap": 6.641220295922068e-08,
+      "old_upper_bound": 0.8847163851727656,
+      "new_upper_bound": 0.8847163515849686
+    }
+  ],
+  "main_replay": {
+    "runs": 840,
+    "counted_arrivals": 103200000,
+    "including_warmup": 120000000,
+    "elapsed_seconds": 700.0325770378113
+  }
+}
